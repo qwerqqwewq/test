@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--1.导入spring的坐标spring-context,对应版本为5.2.10-->
+
+    <!--2.配置bean-->
+    <!--bean标签表示配置bean
+    id属性表示给bean起名字
+    class属性表示给bean定义类型-->
+<!--    <bean id="bookDao" class="org.zte.dao.impl.BookDaoImpl"/>-->
+
+    <!--方式二.使用静态工厂实例化bean-->
+<!--    <bean id="bookDao" class="org.zte.factory.BookDaoFactory" factory-method="getBookDao"/>-->
+
+    <!--方式三：使用实例工厂实例化bean-->
+<!--    <bean id="userFactory" class="org.zte.factory.UserDaoFactory"/>-->
+<!--    <bean id="userDao" factory-method="getUserDao" factory-bean="userFactory"/>-->
+
+    <!--方式四：使用factoryBean实例化bean-->
+    <bean id="userDao" class="org.zte.factory.UserDaoFactoryBean"/>
+
+
+<!--    <bean id="bookService" class="org.zte.service.impl.BookServiceImpl">-->
+<!--        &lt;!&ndash;7.配置service和dao的关系&ndash;&gt;-->
+<!--        &lt;!&ndash;property表示配置当前bean的属性&ndash;&gt;-->
+<!--        &lt;!&ndash;name属性表示配置哪一个具体的属性-->
+<!--        ref属性表示参照哪一个bean&ndash;&gt;-->
+<!--        <property name="bookDao" ref="bookDao"/>-->
+<!--    </bean>-->
+    00010 4
+    00000 3 -1
+    00010 5 12309
+    11451 6 00000
+    12309 7 11451
+
+
+</beans>
